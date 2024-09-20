@@ -1,0 +1,546 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{background}
+\usepackage{graphicx}
+\usepackage[a4paper, margin=0.9in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\backgroundsetup{contents=\includegraphics{background.jpeg},opacity=0.7,angle=0,scale=1}
+\geometry{left=1in, right=1in, top=1in, bottom=1in}
+\usepackage{titling}
+
+\begin{document}
+
+
+\begin{center}
+    \huge\textbf{MAULANA ABUL KALAM AZAD UNIVERSITY OF TECHNOLOGY}\\
+
+\end{center}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.3\linewidth]{makaut.png}
+\end{figure}
+\date{\today} 
+\begin{center}
+    \section*{\textbf{\underline{Software Tools and Technology (Lab Notbook)}}}
+    \vspace{0.4cm}
+\end{center}
+\begin{center}
+
+\vspace{0.2 cm}
+\renewcommand{\arraystretch}{2}
+\hspace*{0.08in}
+\begin{tabular}{ |c|c|c| }
+\hline
+\multicolumn{3}{|c|}{\Large \textbf{\textit{Group 12}}} \\
+\hline
+NAME & ROLL NO.& DEPARTMENT \\
+\hline
+Sk Shoaib Akhter [LEAD]& 30001223043& BCA \\
+\hline
+Urjjaswi Paul& 30059223024& Bsc in Forensic Science\\
+\hline
+Pranjal Paul& 30059223023& Bsc in Forensic Science\\
+\hline
+Rupkatha Bhowmik& 30059223009& Bsc in Forensic Science\\
+\hline
+Alankrita Ghosh& 30059223010& Bsc in Forensic Science\\
+\hline
+\end{tabular}
+
+\end{center}
+\newpage
+
+\vspace{3cm} 
+\begin{center}
+    \Huge \textbf{\textcolor{black}{\underline{Table of Contents}}} 
+\end{center}
+
+\vspace{2cm} 
+
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|m{8cm}|}
+\hline
+\textbf{Sl. No.} & \textbf{Questions} \\
+\hline
+1 & Introduction to GitHub and GitHub Desktop version installation. \\
+
+\hline
+2 & Enumerate ABC Format and Roman Number in LaTeX\\
+
+\hline
+3 & Building a C program for a calculator in the local repository, committing, and publishing it as a public repository.\\
+
+\hline
+4 & How to create matrix in LaTeX.\\
+
+\hline
+5 & Rename the button from "Submit" to "Chin Tapak Dum Dum." and create a pull request\\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\newpage 
+
+
+\begin{center}
+    \Large{\textbf{\underline{Lab -1 by Shoaib}}}
+    \end{center}
+    \vspace{1cm}
+   \begin{center}
+    \textbf{\underline{ Introduction to GitHub and GitHub installation}}
+\end{center}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.25\linewidth]{Github.png}
+\end{figure}
+\begin{center}
+    \section*{\textbf{\underline{GitHub}}}
+\end{center}
+
+
+\large{GitHub is a cloud-based platform specifically designed for developers to collaborate on code and manage software projects using Git, a widely used version control system. At its core, GitHub provides a space called repositories where code is stored, allowing users to track changes over time and maintain a complete history of all updates made to the project. Through GitHub, developers can work on different features or versions of a project simultaneously by creating separate branches, which can later be merged back into the main codebase using pull requests, ensuring smooth integration of changes.}
+\vspace{1 cm}
+\begin{center}
+    \section*{\textbf{\underline{Installation}}}
+\end{center}
+
+\large{Installing GitHub involves a few simple steps to get started with managing and collaborating on code. First, download and install Git, the version control system that GitHub uses, from the official Git website. For Windows users, run the downloaded installer and follow the prompts. On macOS, you can install Git through the terminal if it’s not already present. For Linux users, Git can be installed via the terminal with package management commands. Once Git is set up, configure it with your GitHub username and email to link your commits to your GitHub account. If you prefer a graphical interface, you can also download GitHub Desktop from its official website, which makes it easier to handle repositories, make commits, and manage branches without using the command line. After installation, sign in with your GitHub credentials or create a new account if necessary.}
+
+\newpage
+
+\begin{center}
+     \textbf{\underline{\large{Lab-2 by Rupkatha}}}
+     \end{center}
+     \vspace{0.5cm}
+\begin{center}
+     \textbf{\large{\underline{Enumerate ABC Format and Roman Number in LaTeX}}}
+ \end{center}
+
+\begin{center}
+    \section*{\underline{\textbf{\large{Introduction}}}}
+\end{center}
+
+
+\large{To create enumerated lists in LaTeX using both alphabetic (ABC) format and Roman numeral format, you can use the \texttt{enumerate} environment. LaTeX allows customization of list labels either by using the \texttt{enumerate} package (basic customization) or the \texttt{enumitem} package (more advanced customization). Below is a detailed explanation and corresponding LaTeX code.}
+
+\subsection*{1.\underline{Alphabetic Format (ABC):}}
+\begin{itemize}
+    \item For alphabetic enumeration (A, B, C...), you can use either the \texttt{enumerate} package or the \texttt{enumitem} package.
+  \end{itemize}
+
+\subsection*{2. \underline{Roman Numerals:}}
+\begin{itemize}
+    \item For Roman numeral enumeration (I, II, III...), you can use \texttt{[I.]} with the \texttt{enumerate} package, or \texttt{label=\Roman*.} with the \texttt{enumitem} package.
+\end{itemize}
+
+\section*{\underline{Example}}
+
+Here’s the LaTeX code that implements both alphabetic and Roman numeral enumerations:
+
+\begin{verbatim}
+\documentclass{article}
+
+% Using the enumerate package for basic list formatting
+\usepackage{enumerate}
+
+% Using the enumitem package for advanced list formatting
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Enumerated Lists: ABC Format and Roman Numerals}
+
+\subsection*{Using the enumerate Package}
+
+\subsubsection*{Alphabetic Format (ABC)}
+
+% Alphabetic enumeration using enumerate package
+\begin{enumerate}[A.]
+  \item First item
+  \item Second item
+  \item Third item
+\end{enumerate}
+
+\subsubsection*{Roman Numerals}
+
+% Roman numeral enumeration using enumerate package
+\begin{enumerate}[I.]
+  \item First item
+  \item Second item
+  \item Third item
+\end{enumerate}
+
+\subsection*{Using the enumitem Package}
+
+\subsubsection*{Alphabetic Format (ABC)}
+
+% Alphabetic enumeration using enumitem package
+\begin{enumerate}[label=\Alph*.]
+  \item First item
+  \item Second item
+  \item Third item
+\end{enumerate}
+
+\subsubsection*{Roman Numerals}
+
+% Roman numeral enumeration using enumitem package
+\begin{enumerate}[label=\Roman*.]
+  \item First item
+  \item Second item
+  \item Third item
+\end{enumerate}
+
+\end{document}
+\end{verbatim}
+\section*{\underline{Explanation}}
+
+\subsection*{1. Alphabetic Format (ABC):}
+\begin{itemize}
+    \item \textbf{Using the enumerate package:} In the \texttt{enumerate} environment, you can specify the list type as \texttt{[A.]} to generate an alphabetic list (A, B, C...).
+    \item \textbf{Using the enumitem package:} The \texttt{enumitem} package allows more flexibility by setting the label format as \texttt{label=\Alph*.}.
+\end{itemize}
+\subsection*{2. Roman Numerals:}
+\begin{itemize}
+    \item \textbf{Using the enumerate package:} For Roman numerals, you use \texttt{[I.]} to create the list items as I, II, III...
+    \item \textbf{Using the enumitem package:} You can customize the label with \texttt{label=\Roman*.} to achieve the same effect with more control over spacing and style.
+\end{itemize}
+
+\section*{\underline{Output:}}
+
+The compiled LaTeX document will display two types of lists (ABC and Roman numerals) using both \texttt{enumerate} and \texttt{enumitem} packages.
+
+\newpage 
+
+\begin{center}
+    \Large{\textbf{\underline{Lab-3 by Alankrita}}}
+\end{center}
+\section{\underline{Calculator Program using C}}
+\subsection{\underline{Objective}}
+\LARGE{The objective of this lab is to develop a basic calculator program using the C programming language. The calculator will perform simple arithmetic operations like addition, subtraction, multiplication, and division based on user input.}
+
+\subsection{\underline{Program Overview}}
+The calculator program is designed to:
+\begin{itemize}
+    \item Accept two numbers from the user.
+    \item Prompt the user to select an arithmetic operation (Addition, Subtraction, Multiplication, Division).
+    \item Perform the selected operation.
+    \item Display the result of the operation to the user.
+\end{itemize}
+
+The program includes error handling to manage division by zero and other invalid inputs.
+
+\subsection{\underline{Code Implementation}}
+
+\begin{verbatim}
+#include<stdio.h>
+#include<conio.h>
+void main(){
+    float a,b,c;
+    char ch;
+        printf("Enter the first number : ");
+        scanf("%f",&a);
+            printf("Enter user choice operation : ");
+            scanf(" %c",&ch);
+        printf("Enter the second number : ");
+        scanf("%f",&b);
+    switch(ch){
+        case'+':c=a+b;
+            printf("Output is : %f",c);
+        break;
+        case'-':c=a-b;
+            printf("Output is : %f",c);
+        break;
+        case'*':c=a*b;
+            printf("Output is : %f",c);
+        break;
+        case'/':c=a/b;
+            printf("Output is : %f",c);
+        break;
+            default:printf("Invalid operation");
+        break;
+    } getch();
+}
+\end{verbatim}
+\subsection{\underline{Compiling and Running the Program}}
+To compile and run the calculator program:
+\begin{enumerate}
+    \item Open a terminal or command prompt.
+    \item Navigate to the directory where the C file is located.
+    \item Compile the program using a C compiler (e.g., GCC):
+    \begin{verbatim}
+    gcc calculator.c -o calculator
+    \end{verbatim}
+    \item Run the compiled program:
+    \begin{verbatim}
+    ./calculator
+    \end{verbatim}
+\end{enumerate}
+\subsection{\underline{Adding the Calculator Program to GitHub Repository}}
+To add this calculator program to a GitHub repository, follow these steps:
+
+\subsubsection{Step 1: Initialize a Local Git Repository}
+\begin{enumerate}
+    \item Open the terminal and navigate to the directory where your \texttt{calculator.c} file is located.
+    \item If you haven't already, initialize a Git repository in that directory:
+    \begin{verbatim}
+    git init
+    \end{verbatim}
+    This command creates a new Git repository in the current directory.
+\end{enumerate}
+
+
+\subsubsection{Step 2: Add the File to the Repository}
+\begin{enumerate}
+    \item Add the \texttt{calculator.c} file to the staging area:
+    \begin{verbatim}
+    git add calculator.c
+    \end{verbatim}
+    This command stages the file, indicating that you want to include it in the next commit.
+\end{enumerate}
+
+\subsubsection{Step 3: Commit the Changes}
+\begin{enumerate}
+    \item Commit the file to the repository with a meaningful message:
+    \begin{verbatim}
+    git commit -m "Add calculator program in C"
+    \end{verbatim}
+\end{enumerate}
+\subsubsection{Step 4: Push the Changes to GitHub}
+\begin{enumerate}
+    \item Link your local repository to a remote GitHub repository:
+    \small{
+    \begin{verbatim}
+    git remote add origin https://github.com/yourusername/your-repo-name.git
+    \end{verbatim} }
+    \item Push the changes to the GitHub repository:
+    \begin{verbatim}
+    git push -u origin master
+    \end{verbatim}
+\end{enumerate}
+
+\subsubsection{Step 5: Verify the Upload}
+\begin{enumerate}
+    \item Go to your GitHub repository URL in a web browser.
+    \item Verify that the \texttt{calculator.c} file is listed and accessible in the repository.
+\end{enumerate}
+
+\newpage
+\begin{center}
+    \LARGE{\textbf{\underline{Lab-4 by Urjjaswi}}}
+\end{center}
+\vspace{0.2cm}
+ \begin{center}
+     \section*{\underline{How to create Matrix in LaTeX}}
+\end{center}
+\LARGE{To create a matrix in LaTeX, we use the \texttt{\textbf{amsmath}} package, which provides various environments for displaying matrices. Here’s a basic guide on how to create a matrix and the different options available:}
+\vspace{0.1cm}
+\begin{center}
+\begin{itemize}
+    \item{\underline{\textbf{Include the \texttt{amsmath} Package}}}
+\end{itemize} 
+\end{center}
+First, ensure you have the \texttt{amsmath} package included in your LaTeX document preamble. Add the following line:
+\begin{verbatim}
+\usepackage{amsmath}
+\end{verbatim}
+\begin{center}
+    \begin{itemize}
+        \item {\textbf{\underline{Matrix Environments}}}
+    \end{itemize}
+\end{center}
+\LARGE{
+There are several environments for creating matrices, depending on how you want them formatted. Here are the most common ones:}
+
+\begin{itemize}
+  \item \texttt{matrix}: A basic matrix without brackets.
+  \item \texttt{bmatrix}: A matrix with square brackets.
+  \item \texttt{pmatrix}: A matrix with parentheses.
+  \item \texttt{vmatrix}: A matrix with vertical bars.
+  \item \texttt{Vmatrix}: A matrix with double vertical bars.
+\end{itemize}
+\newpage
+\begin{center}
+        \item {\textbf{\underline{\LARGE{Syntax}}}}
+\end{center}
+
+\LARGE{The syntax for creating a matrix is similar across different environments. Use the \texttt{\textbackslash begin\{environment\}} and \texttt{\textbackslash end\{environment\}} commands to enclose the matrix content. Separate the elements in each row with \texttt{\&} and end each row with \texttt{\\}.
+
+Here’s an example of a 2x2 matrix in each environment:}
+\begin{verbatim}
+[ 
+$ \begin{matrix}
+    1 & 0 \\
+    0 & 1 
+\end{matrix}
+$ ]
+
+\begin{bmatrix}   [
+ $   \begin{matrix}
+    1 & 0\\
+    0 & 1
+    \end{matrix}
+ $   ]
+
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{bmatrix}
+
+\begin{pmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{pmatrix}
+
+\begin{vmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{vmatrix}
+
+\begin{Vmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{Vmatrix}
+\end{verbatim}
+
+\begin{center}
+\section*{\textbf{\underline{\LARGE{Explanation}}}}
+\end{center}
+\begin{itemize}
+  \item \texttt{\textbackslash begin\{matrix\} ... \textbackslash end\{matrix\}}: Creates a matrix with no surrounding brackets.
+  \item \texttt{\textbackslash begin\{bmatrix\} ... \textbackslash end\{bmatrix\}}: Surrounds the matrix with square brackets.
+  \item \texttt{\textbackslash begin\{pmatrix\} ... \textbackslash end\{pmatrix\}}: Surrounds the matrix with parentheses.
+  \item \texttt{\textbackslash begin\{vmatrix\} ... \textbackslash end\{vmatrix\}}: Surrounds the matrix with single vertical bars, often used to denote determinants.
+  \item \texttt{\textbackslash begin\{Vmatrix\} ... \textbackslash end\{Vmatrix\}}: Surrounds the matrix with double vertical bars, also used for determinants or norms.
+\end{itemize}
+\newpage
+
+\begin{center}
+    \textbf{\LARGE{\underline{Lab-5 by Pranjal}}}
+\end{center}
+\vspace{0.5cm}
+{\underline{Rename the button from ”Submit” to ”Chin Tapak
+Dum Dum.”}}
+\section{Introduction}
+This document outlines the process of modifying a "Submit" button in a mind reader application and submitting a pull request to the original GitHub repository. The repository in question is available at \url{https://github.com/GeekAyan/STT}. The modification includes renaming the button and fixing proportion issues.
+
+\subsection{Cloning the GitHub Repository}
+\textbf{Step}: Clone the GitHub repository using GitHub Desktop.
+
+\textbf{Action}:
+\begin{itemize}
+    \item Open GitHub Desktop and select \texttt{File > Clone Repository}.
+    \item Enter the repository URL: \url{https://github.com/GeekAyan/STT} and select a directory to clone it.
+\end{itemize}
+
+\subsection{Opening the Project in an IDE}
+\textbf{Step}: Open the cloned project using your preferred IDE (e.g., VS Code, PyCharm).
+
+\textbf{Action}:
+\begin{itemize}
+    \item Open the folder containing the cloned project.
+    \item Review the \texttt{README.md} for instructions on how to run the project.
+\end{itemize}
+
+\subsection{Install Dependencies}
+\textbf{Step}: Install any dependencies required by the project as per the \texttt{README.md} file.
+
+\textbf{Action}:
+\begin{itemize}
+    \item Set up the environment. If the project uses Python, create a virtual environment and install dependencies using:
+    \begin{lstlisting}[language=bash]
+    pip install -r requirements.txt
+    \end{lstlisting}
+    \item Follow other system requirements mentioned in the \texttt{README.md}.
+\end{itemize}
+
+\subsection{Running the Application}
+\textbf{Step}: Run the application as per the instructions in \texttt{README.md}.
+
+\textbf{Action}:
+\begin{itemize}
+    \item Use your IDE's terminal to run the project.
+    \item Ensure the application works as expected.
+\end{itemize}
+
+\subsection{Renaming the Submit Button}
+\textbf{Step}: Rename the button from "Submit" to "Chin Tapak Dum Dum."
+
+\textbf{Action}:
+\begin{itemize}
+    \item Find the code section responsible for the submit button's label.
+    \item Modify the label. For example:
+    \begin{lstlisting}[language=HTML]
+    <button id="submit" name="submit">Chin Tapak Dum Dum</button>
+    \end{lstlisting}
+\end{itemize}
+
+\newpage
+
+\subsection{Fixing the Button Proportion}
+\textbf{Step}: After renaming the button, analyze and adjust its proportions.
+
+\textbf{Action}:
+\begin{itemize}
+    \item Check the CSS properties related to the button's size, padding, and font.
+    \item Modify the button’s CSS if needed, for example:
+    \item Save changes and re-run the application to check the button's appearance.
+\end{itemize}
+
+\subsection{Testing the Application}
+\textbf{Step}: Test the application after modifying the button.
+
+\textbf{Action}: 
+\begin{itemize}
+    \item Run the application again to verify that the button looks correct and functions properly.
+\end{itemize}
+
+\subsection{Committing the Changes}
+\textbf{Step}: Commit your changes locally.
+
+\textbf{Action}:
+\begin{itemize}
+    \item Stage the files and commit with a descriptive message, for example:
+    \begin{lstlisting}[language=bash]
+    git commit -m "Renamed submit button and fixed proportion issue"
+    \end{lstlisting}
+\end{itemize}
+\newpage
+
+\subsection{Pushing Changes to Your Fork}
+\textbf{Step}: Push your changes to your GitHub fork.
+
+\textbf{Action}:
+\begin{itemize}
+    \item If you haven’t forked the repository, go to the GitHub page and fork it.
+    \item Add the forked repository as a remote and push your changes:
+    \begin{lstlisting}[language=bash]
+    git remote add origin https://github.com/<YourGitHubUsername>/STT.git
+    git push origin main
+    \end{lstlisting}
+\end{itemize}
+
+\subsection{Creating a Pull Request}
+\textbf{Step}: Create a pull request to the original repository.
+
+\textbf{Action}:
+\begin{itemize}
+    \item Go to your fork on GitHub and create a new pull request.
+    \item Provide a descriptive title and details of your changes.
+    \item Submit the pull request.
+\end{itemize}
+
+\subsection{Review and Approval}
+\textbf{Step}: Wait for feedback or approval.
+\textbf{Action}:
+\begin{itemize}
+    \item Respond to feedback or requested changes, if any.
+    \item Once approved, your changes will be merged into the original project.
+\end{itemize}
+\end{document}
