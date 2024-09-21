@@ -113,5 +113,106 @@ Alankrita Ghosh& 30059223010& Bsc in Forensic Science\\
 \end{center}
 
 \large{Installing GitHub involves a few simple steps to get started with managing and collaborating on code. First, download and install Git, the version control system that GitHub uses, from the official Git website. For Windows users, run the downloaded installer and follow the prompts. On macOS, you can install Git through the terminal if it’s not already present. For Linux users, Git can be installed via the terminal with package management commands. Once Git is set up, configure it with your GitHub username and email to link your commits to your GitHub account. If you prefer a graphical interface, you can also download GitHub Desktop from its official website, which makes it easier to handle repositories, make commits, and manage branches without using the command line. After installation, sign in with your GitHub credentials or create a new account if necessary.}
+\newpage
 
+\begin{center}
+     \textbf{\underline{\large{Lab-2 by Pranjal}}}
+     \end{center}
+     \vspace{0.5cm}
+\begin{center}
+     \textbf{\large{\underline{Enumerate ABC Format and Roman Number in LaTeX}}}
+ \end{center}
+
+\begin{center}
+    \section*{\underline{\textbf{\large{Introduction}}}}
+\end{center}
+
+
+\large{To create enumerated lists in LaTeX using both alphabetic (ABC) format and Roman numeral format, you can use the \texttt{enumerate} environment. LaTeX allows customization of list labels either by using the \texttt{enumerate} package (basic customization) or the \texttt{enumitem} package (more advanced customization). Below is a detailed explanation and corresponding LaTeX code.}
+
+\subsection*{1.\underline{Alphabetic Format (ABC):}}
+\begin{itemize}
+    \item For alphabetic enumeration (A, B, C...), you can use either the \texttt{enumerate} package or the \texttt{enumitem} package.
+  \end{itemize}
+
+\subsection*{2. \underline{Roman Numerals:}}
+\begin{itemize}
+    \item For Roman numeral enumeration (I, II, III...), you can use \texttt{[I.]} with the \texttt{enumerate} package, or \texttt{label=\Roman*.} with the \texttt{enumitem} package.
+\end{itemize}
+
+\section*{\underline{Example}}
+
+Here’s the LaTeX code that implements both alphabetic and Roman numeral enumerations:
+
+\begin{verbatim}
+\documentclass{article}
+
+% Using the enumerate package for basic list formatting
+\usepackage{enumerate}
+
+% Using the enumitem package for advanced list formatting
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Enumerated Lists: ABC Format and Roman Numerals}
+
+\subsection*{Using the enumerate Package}
+
+\subsubsection*{Alphabetic Format (ABC)}
+
+% Alphabetic enumeration using enumerate package
+\begin{enumerate}[A.]
+  \item First item
+  \item Second item
+  \item Third item
+\end{enumerate}
+
+\subsubsection*{Roman Numerals}
+
+% Roman numeral enumeration using enumerate package
+\begin{enumerate}[I.]
+  \item First item
+  \item Second item
+  \item Third item
+\end{enumerate}
+
+\subsection*{Using the enumitem Package}
+
+\subsubsection*{Alphabetic Format (ABC)}
+
+% Alphabetic enumeration using enumitem package
+\begin{enumerate}[label=\Alph*.]
+  \item First item
+  \item Second item
+  \item Third item
+\end{enumerate}
+
+\subsubsection*{Roman Numerals}
+
+% Roman numeral enumeration using enumitem package
+\begin{enumerate}[label=\Roman*.]
+  \item First item
+  \item Second item
+  \item Third item
+\end{enumerate}
+
+\end{document}
+\end{verbatim}
+\section*{\underline{Explanation}}
+
+\subsection*{1. Alphabetic Format (ABC):}
+\begin{itemize}
+    \item \textbf{Using the enumerate package:} In the \texttt{enumerate} environment, you can specify the list type as \texttt{[A.]} to generate an alphabetic list (A, B, C...).
+    \item \textbf{Using the enumitem package:} The \texttt{enumitem} package allows more flexibility by setting the label format as \texttt{label=\Alph*.}.
+\end{itemize}
+\subsection*{2. Roman Numerals:}
+\begin{itemize}
+    \item \textbf{Using the enumerate package:} For Roman numerals, you use \texttt{[I.]} to create the list items as I, II, III...
+    \item \textbf{Using the enumitem package:} You can customize the label with \texttt{label=\Roman*.} to achieve the same effect with more control over spacing and style.
+\end{itemize}
+
+\section*{\underline{Output:}}
+
+The compiled LaTeX document will display two types of lists (ABC and Roman numerals) using both \texttt{enumerate} and \texttt{enumitem} packages.
 \end{document}
